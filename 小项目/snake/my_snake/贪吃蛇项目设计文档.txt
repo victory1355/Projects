@@ -1,0 +1,92 @@
+
+
+
+/ ***************贪吃蛇项目设计文档****************/
+
+
+
+1，需求分析
+		   a,通过方向键控制蛇的移动方向
+		   b,有暂停功能
+		   c,有定时功能
+		   
+		   
+		   
+2，设计阶段
+
+2,1数据结构的设计
+//蛇的坐标，根据用户的输入不断的更新
+struct snake_info
+{
+	int x;
+	int y;
+};
+//链表的节点信息
+typedef struct snake
+{
+	struct list_head list;
+	struct snake_info snake_node;
+}Snake;
+2,1接口的设计
+
+
+1，逻辑部分
+			//创建一条蛇
+			bool create_snake(struct list_head, int snake_len)
+			//遍历链表，采用内联函数
+			void treavers(Snake* (func)(struct list_head *head))
+			//在终端机上打印所有的节点
+			Snake* print_node(struct list_head *head)
+			//按键的检测
+			void key_scaner()
+			//蛇的移动
+			void snake_move()
+			//定时函数
+			void set_time()
+			//创建节点
+			Snake* create_node(Snake* node)
+			//插入节点
+			bool insert_node(struct list_head *head, struct list_head *new)
+			//删除节点
+			bool delete_node(struct list_head *head, struct list_head *del)
+2，UI部分
+			//初始化屏幕，生成一个游戏的界面
+			bool init_game()
+
+
+
+
+
+
+程序运行的流程
+1，初始化屏幕
+2，创建一条蛇
+3，提示用户按键盘开始游戏
+4，不断的检测按键，如果没有输入的话，就一直往一个方向上移动
+   直到碰到前或者改变方向为止，如果在指定时间内没有完成任务就退出游戏
+5，结束游戏
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

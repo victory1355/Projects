@@ -1,0 +1,22 @@
+Disk 
+Units: bytes
+Sector 
+I/O 
+Disklabel 
+Disk 
+ 
+Device 
+/dev/sda1 
+/dev/sda2 
+/dev/sda5 /
+ 
+ 
+Disk 
+Units: bytes
+Sector 
+I/O 
+Disklabel 
+Disk 
+ 
+Device 
+/dev/sdb1 FAT32
